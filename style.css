@@ -1,0 +1,42 @@
+#container {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: gray;
+    height: 600px;
+    overflow: scroll;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+p {
+    font-size: 30px;
+}
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}

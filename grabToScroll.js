@@ -23,7 +23,10 @@ document.addEventListener('mousemove', event => {
     };
 });
 
-document.addEventListener('mouseup', () => isDragging = false);
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    isDraggingDiv = false;
+});
 
 
 // dragging inside all divs
